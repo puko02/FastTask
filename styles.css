@@ -6,7 +6,7 @@
 
 body {
   font-family: "Sour Gummy", sans-serif;
-  background-color: rgba(255, 73, 73, 1);
+  background-color: rgba(255, 73, 73, 0.901);
   color: #fff;
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ body {
     width: 50px;
     height: 25px;
     border-radius: 50px;
-    background-color: #eee;
+    background-color: rgba(255, 73, 73, 0.901);
     outline: none;
     cursor: pointer;
     position: relative;
@@ -62,7 +62,7 @@ body {
   }
 
   #theme:checked {
-    background-color: #351165;
+    background-color: #501111;
   }
 
   #theme::before {
@@ -71,14 +71,14 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #333;
+    background-color: #501111;
     transition: 1s;
   }
 
   #theme:checked::before {
     transition: 1s;
     left: 25px;
-    background-color: #eee;
+    background-color: rgba(255, 73, 73, 0.901);
   }
 
   .nav-button {
@@ -92,20 +92,19 @@ body {
     font-size: 0.9rem;
     transition: background-color 0.2s ease;
     margin: 0 20px;
-    /* Ajusta as margens */
     flex: 0 0 auto;
   }
 
   .nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(254, 55, 55, 0.551);
   }
 
   .nav-button.danger {
-    background-color: rgba(255, 59, 48, 0.2);
+    background-color: rgb(185 51 51);
   }
 
   .nav-button.danger:hover {
-    background-color: rgb(114, 0, 0);
+    background-color: rgba(129, 0, 0, 0.732);
   }
 
   /* Dark Theme */
@@ -170,7 +169,7 @@ body {
     border: none;
     outline: none;
     margin-bottom: 20px;
-    box-shadow: 3px 4px 7px rgba(0, 0, 0, .5);
+    box-shadow: 3px 4px 7px rgba(131, 0, 0, 0.5);
   }
 
   .button {
@@ -187,7 +186,7 @@ body {
   }
 
   .button:hover {
-    background-color: #007e15;
+    background-color: #7e0000;
     color: white;
   }
 
@@ -213,7 +212,8 @@ body {
   }
 
   #userEmail {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: #fff;
   }
 
@@ -263,29 +263,8 @@ body {
 
   #add-board {
     margin-top: 20px;
-    background-color: #5500FF;
+    background-color: #ff0000;
     color: white;
-  }
-
-  .dropdown {
-    width: 200px;
-    padding: 10px;
-    margin-left: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    flex: 1;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .dropdown {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
   }
 
   .board-content {
@@ -303,7 +282,7 @@ body {
   }
 
   .column {
-    background: #ebecf0;
+    background: #f0ebeb;
     border-radius: 3px;
     width: 272px;
     padding: 0.5rem;
@@ -335,20 +314,20 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #6b778c;
+    color: #951c1c;
     padding: 4px 8px;
     border-radius: 3px;
     opacity: 0;
     transition: all 0.2s ease;
   }
-
+  
   .column-header:hover .delete-column-btn {
     opacity: 1;
   }
 
   .delete-column-btn:hover {
-    background-color: rgba(9, 30, 66, 0.08);
-    color: #172b4d;
+    background-color: rgba(143, 18, 18, 0.08);
+    color: #630505;
   }
 
   .task-list {
@@ -360,7 +339,7 @@ body {
     border-radius: 3px;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    box-shadow: 0 1px 0 rgba(142, 1, 1, 0.25);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -376,7 +355,7 @@ body {
   .delete-task-btn {
     background: none;
     border: none;
-    color: #6b778c;
+    color: #a31111;
     font-size: 16px;
     cursor: pointer;
     padding: 4px 8px;
@@ -394,14 +373,14 @@ body {
 
   .edit-task-btn:hover,
   .delete-task-btn:hover {
-    background-color: rgba(9, 30, 66, 0.08);
-    color: #172b4d;
+    background-color: rgba(137, 23, 23, 0.08);
+    color: #9d0000;
   }
 
   .delete-task-btn {
     background: none;
     border: none;
-    color: #6b778c;
+    color: #8a2020;
     font-size: 16px;
     cursor: pointer;
     padding: 4px 8px;
@@ -419,13 +398,13 @@ body {
 
   .delete-task-btn:hover {
     background-color: rgba(9, 30, 66, 0.08);
-    color: #172b4d;
+    color: #6b0000;
   }
 
   #add-column {
     min-width: 272px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.24);
+    background: rgba(180, 10, 10, 0.692);
     color: white;
     border: none;
     border-radius: 3px;
@@ -439,7 +418,7 @@ body {
   }
 
   #add-column:hover {
-    background: rgba(255, 255, 255, 0.32);
+    background: rgba(255, 52, 52, 0.836);
   }
 
   .add-task-btn {
@@ -447,14 +426,14 @@ body {
     border: none;
     cursor: pointer;
     font-size: 20px;
-    color: #5e6c84;
+    color: #7f2222;
     padding: 4px 8px;
     border-radius: 3px;
   }
 
   .add-task-btn:hover {
     background: rgba(9, 30, 66, 0.08);
-    color: #172b4d;
+    color: #851212;
   }
 
   #current-board-name {
@@ -466,5 +445,40 @@ body {
   .theme-toggle {
     flex: 0 0 auto;
     margin-left: auto;
-    /* Empurra para a direita */
+  }
+
+  .dropdown {
+    width: 200px;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 1rem;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #880b0b;
+    color: rgb(255, 255, 255);
+    border: 1px solid #9d0000;
+  }
+
+  .dropdown option {
+    background-color: #a30000;
+    color: white;
+  }
+
+  .dropdown:focus {
+    outline: none;
+    border-color: #c00000;
+    box-shadow: 0 0 0 2px rgb(153, 4, 4);
+    
+  }
+  
+  .dropdown {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
   }
