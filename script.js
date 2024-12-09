@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const email = document.getElementById('email').value;
 
     if (!email) {
-      alert('Por favor, insira um email');
+      const showError = document.getElementById('error');
+      showError.innerHTML = "Por favor, insira um email";
       return;
     }
 
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     addColumnButton.addEventListener('click', async () => {
       const boardId = document.getElementById('user-boards-dropdown').value;
       if (!boardId) {
-        alert('Por favor, selecione um quadro primeiro');
+        alert('Por favor, selecione ou crie um quadro antes de continuar');
         return;
       }
       await createNewColumn(boardId);
@@ -122,7 +123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           }
         } catch (error) {
           console.error('Erro ao criar o quadro:', error);
-          alert('Erro ao criar o quadro. Verifique se está logado.');
+          alert('Erro ao criar o quadro, verifique se você está logado em uma conta válida.');
         }
       }
     });
@@ -149,6 +150,10 @@ async function loadUserBoards() {
   try {
     const response = await fetch(`${API_BASE_URL}/Boards`);
     const boards = await response.json();
+
+    if(!response.ok){
+      throw new Error('Erro ao carregar os quadros');
+    }
 
     const userBoardsDropdown = document.getElementById('user-boards-dropdown');
     userBoardsDropdown.innerHTML = '<option value="">Selecione um quadro</option>';
