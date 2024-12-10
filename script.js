@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('Elemento login-button não encontrado');
   }
 
-  const clickEnter = addEventListener('keydown', function (event) {
+  document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
       handleLogin();
     }
@@ -216,9 +216,7 @@ function createColumnElement(column) {
   `;
   
 
-  const addTaskBtn = columnElement.querySelector('.add-task-btn');
-  addTaskBtn.addEventListener('click', () => addNewTask(column.Id));
-
+  columnElement.querySelector('.add-task-btn').addEventListener('click', () => addNewTask(column.Id));
 
   const deleteColumnBtn = columnElement.querySelector('.delete-column-btn');
   deleteColumnBtn.addEventListener('click', async (e) => {
